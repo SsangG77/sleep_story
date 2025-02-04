@@ -37,7 +37,7 @@
 
 </br>
 
-## 2. 디자인
+## 디자인
 [Figma link](https://www.figma.com/design/MrIssyj6V5YkhfQ0962rnh/sleep-story?node-id=0-1&p=f&t=tyCw6cV9YpUzCeee-0)
 
 </br>
@@ -47,7 +47,7 @@
 </br>
 
 
-## 3. 페이지별 기능
+## 페이지별 기능
 
 - 수면 기록 데이터로 이야기를 만들고 스토리를 공유할 수 있습니다.
 
