@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct TodayView: View {
+    
+    @ObservedObject var sleepManager: SleepManager
+//    @State private var showingStory = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(spacing: 10) {
+                // 상단 헤더
+                HeaderView()
+                
+                ScrollView {
+                    
+                    // 수면 데이터 카드
+                    if let latestSleep = sleepManager.latestSleepData {
+                        
+                        SleepStoryCard(sleepData: latestSleep)
+                            .padding()
+                    } else {
+                        NoDataView()
+                    }
+                    
+                    // 수면 기록 버튼
+                    RecordSleepButton(action: sleepManager.recordSleep)
+                    
+                }
+                Spacer()
+            }
+            .navigationTitle("수면 스토리텔러")
+        }
     }
 }
 
-#Preview {
-    TodayView()
-}
