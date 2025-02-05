@@ -7,12 +7,20 @@
 
 import SwiftUI
 
+
+// 수면 기록 버튼
 struct RecordSleepButton: View {
+    let action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action) {
+            Text("수면 기록하기")
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.indigo)
+                .cornerRadius(10)
+        }
     }
 }
 
-#Preview {
-    RecordSleepButton()
-}
